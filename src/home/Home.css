@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carouselDiv{
+width: 100%;
+height: 95vh;
+position: relative;
+}
+
+.carouselDiv img{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselDiv .carousel-caption{
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    padding: 0 30% 0 3%;
+    transform: translate(0,-50%);
+    bottom: initial;
+    left: 0;
+}
+
+.dCaption h1{ 
+font-size: 2rem;
+}
+.dCaption p{ 
+font-size: 1rem;
+}
+
+.SenideaEnableAllDiv {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.commentDiv{
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.SenideaEnableAllDivImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.impactComponentDiv {
+    width: 95%;
+}
+
+.OurImpactComponetDiv {
+    width: 8rem;
+}
+
+.OurImpactComponetDiv img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 6/5;
+    object-fit: cover;
+}
+
+.coreValueLadyImg {
+    width: 40%;
+    height: 38vh;
+}
+
+.coreValueLadyImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* WHERE I HAVE GOTTEN TO */
+
+.SenideaEnableAllText {
+    width: 40%;
+}
+
+
+
+/* CORE VALUE SECTION */
+
+
+
+.FontSize {
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+/* PART OF CHANGE SECTION */
+.beneficiaryAndSupportDiv {
+    width: 10rem;
+    height: 15vh;
+    margin-bottom: 10rem;
+}
+
+.beneficiaryAndSupportDiv img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/2;
+    object-fit: cover;
+}
+
+/* OUR PROGRAM SECTION */
+
+.OurProgramDiv {
+    width: 95%;
+    margin: 0 auto 3rem;
+}
+
+.OurProgramDiv img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center 0.3rem;
+}
+
+.saturateImage img {
+    filter: grayscale(100);
+}
+
+.messageInputDiv input {
+    width: 100%;
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+}
+
+/* HOME MESSAGE INPUTE SECTION */
+.HomeMessageSubmitBtn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: .5s all;
+}
+
+.HomeMessageInput::placeholder {
+    color: #fff;
+}
+
+/* HELP PEOPLE SECTION */
+
+.helpPeopleImageDiv1 {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    margin: -1.3rem 20rem 0 0;
+    /* animation: helpPeopleImageDiv1 5s linear 2s infinite alternate ; */
+    /* z-index: 1; */
+    /* animation-duration: 4s; */
+}
+
+/* @keyframes helpPeopleImageDiv1{
+    0%{margin: 0;}
+    100%{margin: -1.3rem 20rem 0 0;}
+    
+} */
+.helpPeopleImageDiv1 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+}
+
+.helpPeopleImageDiv2 {
+    width: 10rem;
+    height: 10rem;
+    z-index: 2;
+}
+
+.helpPeopleImageDiv2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+}
+
+.helpPeopleImageDiv3 {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    margin: -1rem -12rem 0 0;
+}
+
+.helpPeopleImageDiv3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+}
+
+.helpPeopleImageDiv4 {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    margin: 9rem 12rem 0 0;
+}
+
+.helpPeopleImageDiv4 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.helpPeopleImageDiv5 {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    margin: 7rem -11rem 0 0;
+}
+
+/* TESTIMONIES SECTION */
+.testimoniesBgColor {
+    background-color: #F5F4F4;
+}
+
+@media (min-width:768px) {
+.dCaption h1{ 
+font-size: 4rem;
+}
+.dCaption p{ 
+font-size: 1.4rem;
+}
+    .SenideaEnableAllDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .commentDiv{
+    border-top-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+    .SenideaEnableAllDivImg {
+        width: 18rem;
+    }
+
+    .OurImpactComponetDiv {
+        width: 11rem;
+    }
+
+    .OurImpactComponetDiv h6 {
+        font-size: 1.7rem;
+    }
+
+    .OurImpactComponetDiv p {
+        font-size: larger;
+    }
+
+    .coreValueLadyImg {
+        width: 40%;
+        height: 83vh;
+    }
+
+    .coreValueLadyImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .beneficiaryAndSupportDiv {
+        width: 10rem;
+        height: 15vh;
+        margin-bottom: 5rem;
+    }
+
+    .beneficiaryAndSupportDiv img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4/2;
+        object-fit: cover;
+    }
+
+    .OurProgramDiv {
+        width: 23%;
+        margin: 0 2rem 2rem 0;
+    }
+
+    .OurProgramDiv img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        object-position: center 0.3rem;
+    }
+
+    .messageInputDiv {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 3rem;
+    }
+
+    .messageInputDiv input {
+        width: 48%;
+    }
+
+    .messageForm {
+        width: 75%;
+    }
+     .carouselDiv .carousel-caption{
+    padding: 0 10% 0 3%;
+}
+}
+
+@media (min-width:1023px) {
+    .carouselDiv .carousel-caption{
+    padding: 0 30% 0 3%;
+}
+    .SenideaEnableAllDivImg {
+        width: 22rem;
+        height: 15rem;
+    }
+
+    .coreValueLadyImg {
+        width: 40%;
+        height: 30rem;
+    }
+
+    .coreValueLadyImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .beneficiaryAndSupportDiv {
+        width: 12rem;
+        height: 18vh;
+        margin-bottom: 5rem;
+    }
+
+    .messageTestArea {
+        width: 100%;
+    }
+
+    .commentDiv{
+    border-radius: 1rem;
+}
+}

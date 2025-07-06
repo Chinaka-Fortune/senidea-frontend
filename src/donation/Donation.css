@@ -1,0 +1,7 @@
+.payBtn{
+    background-color: #2A2E94;
+    transition: all .5s;
+}
+.payBtn:hover{
+    background-color: #06066e;
+}

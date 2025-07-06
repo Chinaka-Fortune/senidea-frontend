@@ -1,0 +1,23 @@
+footer{
+    background-color: #00AEEF;
+}
+
+.footerBtn {
+    background-color: #2A2E94;
+}
+.footerBtn:hover {
+    background-color: #171db9;
+}
+
+.footerimg{
+    width: 10rem;
+    background-color: #ECE3E3;
+}
+.footerimg img{
+    width: 100%;
+    height: 100%;
+}
+
+.footerUl1 li{
+    list-style: none;
+}

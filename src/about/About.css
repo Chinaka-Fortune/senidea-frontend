@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.aboutUs{
+    background-color: #F5F4F4;
+}
+
+.hoodieBoypixDiv{
+    width: 20rem;
+    height: 20rem;
+    margin-right: 2%;
+}
+
+.hoodieBoypix{
+    width: 100%;
+    height: 100%;
+    /* padding: 3%; */
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.joinUsVrLine{
+    border-left: solid rgb(248, 208, 107);
+    height: 1.5rem;
+    border-width: 0.4rem;
+    width: 7rem;
+}
+
+.vrAndJoinUs{
+    /* align-items: center; */
+    /* justify-items: center; */
+    /* border: 1px solid red; */
+    /* width: 7rem; */
+    /* margin: auto; */
+}
+
+.greenMan{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3.5;
+    object-fit: cover;
+    /* margin-left: 16%;    */
+}
+
+.greenManCol{
+    /* border: 2 polid red; */
+    width: 10rem;
+    height: 7rem;
+    margin-bottom: 7rem;
+
+}
+
+.moneyOnHandImgDiv{
+    width: 10rem;
+    height: 7rem;
+    margin-bottom: 7rem;
+}
+
+.handShakeImgDiv{
+    width: 10rem;
+    height: 7rem;
+    margin-bottom: 10rem;
+}
+
+.joinedHandsImgDiv{
+    width: 10rem;
+    height: 7rem;
+    margin-bottom: 10rem;
+}
+
+@media (min-width:48rem) {
+   .handShakeImgDiv,.joinedHandsImgDiv, .moneyOnHandImgDiv, .greenManCol{
+    width: 15rem;
+    height: 11rem;
+    /* margin-bottom: 10rem; */
+} 
+}
+@media (min-width:1023px) {
+   .handShakeImgDiv,.joinedHandsImgDiv, .moneyOnHandImgDiv, .greenManCol{
+    width: 12rem;
+    height: 8rem;
+    /* margin-bottom: 10rem; */
+} 
+}
+.compassion{
+    width: 30rem;
+    border: 1px solid green;
+}
+
+.OurCulture{
+    width: 30rem;
+    border: 1px solid green;
+    padding: 2%;
+}
+
+.OurCulture{
+    margin-bottom: 5%;
+    margin-top: 7%;
+}
+
+.ourMisionCulture{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.missionPix{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.theBoyWithBroomImg{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 6/5;
+    object-fit: cover;
+}
+
+.theBoyWithBroomDiv{
+    width: 100%;
+    height: max-content;
+}
+
+.volunteerPixDiv{
+    width: 100%;
+    height: 30rem;
+    padding-top: 19%;
+}
+
+.volunteerPix{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 6/7;
+    object-fit: cover;
+    padding-top: 7%;
+}
+
+.joinedhands{
+    width: 8rem;
+    height: 8rem;
+}
+
+.hands{
+    width: 9rem;
+    height: 8rem;
+}
+
+.livesImpatedP{
+    font-weight: bold;
+    text-align: center;   
+}
+ 
+/* .missionAndVis{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 160px;
+    height: 27px;
+} */
+
+.joinedHandParagh{
+    font-weight: bold;
+    text-align: center;
+}
+
+.hoodieBoyAndAbout{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    width: 95%;
+}
+
+.aboutSenidea{
+    color: #2A2E94;
+}
+
+.missionLine{
+    border-left: solid rgb(248, 208, 107);
+    height: 1.2rem;
+    border-width: 0.25rem;
+}
+
+.empowermentFLine, .compassionateLine{
+    border-left: solid black;
+    /* height: 7rem;
+    border-width: 0.10rem; */
+}
+
+/* .empowermentFLineDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 3%;
+}  */
+
+.missionAndVision{
+    text-align: center;
+    /* width: 150px; */
+    /* height: 30px; */
+    color: #2A2E94;
+}
+
+.ourVisionToCreate{
+    margin-top: 3%;
+}
+
+.compassionatefocused{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3%;
+} 
+
+/* .compassionateLine{
+    border-left: solid black;
+    height: 7rem;
+    border-width: 0.10rem;
+} */
+
+.empowerment, .comassionateAction, .ourVision{
+    margin-top: 3%;
+}
+
+.volunteerAndMission{
+    padding: 5%;
+    margin-top: 5%;
+    
+}
+
+.coreValueAndCulture{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+}
+
+.ourCulture{
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+
+.ourCorevalueDiv{
+    /* border: 2px solid red; */
+    width: 47%;
+}
+
+
+
+.aboutVrLine{
+   border-left: solid rgb(248, 208, 107);
+    height: 1.2r2m;
+    border-width: 0.25rem; 
+}
+
+.smilingBoyDiv, .mealservedDiv, .beneficiaryRDiv, .volunteersPixDiv, .oneHandDiv{
+    width: 9rem;
+    height: 8rem;
+}
+
+.beneficiaryRDiv{
+    width: 3rem;
+    height: 8rem;
+}
+
+
+.volunteersPixDiv{
+    width: 4rem;
+    height: 8rem;
+}
+
+.beneficiaryRDiv{
+    width: 9rem;
+    height: 8srem;
+}
+
+.hands{
+    width: 100%;
+    height: 100%;
+}
+
+.beApartOfChange{
+    font-weight: bolder;
+    padding: 3%;
+}
+
+.handShakeImg{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3.5;
+    object-fit: cover;
+    /* margin-left: 20%; */
+}
+
+.greenMan{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3.5;
+    object-fit: cover;
+}
+
+.moneyOnHandImg{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3.5;
+    object-fit: cover;
+    /* margin-right: 3%; */
+}
+
+.handShake{
+     width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3.5;
+    object-fit: cover;
+    /* margin-right: 3%; */
+}
+
+.joinedHands{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4/3.5;
+    object-fit: cover;
+    /* margin-left: -25%; */
+}
+
+/* .outreachProgram, .donateToHelp, .handshakeP, .joinedHandAsst{
+    text-align: center;
+    width: 60%;
+    padding-left: 5%;
+    padding-top: 2%;
+    /* border: 1px solid red; */
+    /* margin-inline-start: 15%; */
+/* } */

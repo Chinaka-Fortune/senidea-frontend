@@ -1,0 +1,18 @@
+.navbar{
+    height:5.5rem;
+    outline: 0.01rem solid rgba(128, 128, 128, 0.459);
+    /* margin-bottom: 10rem; */
+    /* z-index: 3; */
+    /* background-color: white; */
+}
+
+.navbar-brandDiv{
+width: 5rem;
+}
+
+.btnDonation{
+    background-color: #2A2E94;
+}
+.btnDonation:hover{
+    background-color: rgba(42, 46, 148, 0.8);
+}
