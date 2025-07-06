@@ -1,7 +1,7 @@
 import ImageProxy from './ImageProxy';
 
-const API_URL = process.env.REACT_APP_API_URL || 'https://senidea-backend-jugufeehb-fortune-chinakas-projects.vercel.app/api';
-const PAYMENT_API_URL = process.env.REACT_APP_PAYMENT_API_URL || 'https://senidea-backend-jugufeehb-fortune-chinakas-projects.vercel.app/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://senidea-backend-7w797pixb-fortune-chinakas-projects.vercel.app/api';
+const PAYMENT_API_URL = process.env.REACT_APP_PAYMENT_API_URL || 'https://senidea-backend-7w797pixb-fortune-chinakas-projects.vercel.app/api';
 
 const getAuthToken = () => {
   return localStorage.getItem('access_token');
