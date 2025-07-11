@@ -46,7 +46,7 @@ const DashBoardNewsLetter = () => {
     if (!isMounted.current) {
       console.log("Fetching newsletter subscriptions on mount");
       isMounted.current = true;
-      // Only use delay in development mode
+      
       if (process.env.NODE_ENV === "development") {
         setTimeout(() => fetchSubscriptions(), 100);
       } else {
@@ -87,7 +87,7 @@ const DashBoardNewsLetter = () => {
         <div className="col-12 col-lg-10">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h3 style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#ffffff" }}>
-              Manage Newsletter Subscriptions
+              Manage Newsletters
             </h3>
             <button
               className="btn btn-primary"

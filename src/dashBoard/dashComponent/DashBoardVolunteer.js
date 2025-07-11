@@ -40,7 +40,7 @@ const DashBoardVolunteer = () => {
     <div className="container my-5">
       <div className="row justify-content-center">
         <div className="col-lg-10">
-          <h3 className="text-center mb-4">Manage Volunteers</h3>
+          <h3 className="text-center mb-4">Manage Volunteer Submissions</h3>
           {error && <div className="alert alert-danger">{error}</div>}
           {loading && <div className="alert alert-info">Loading...</div>}
           <div className="table-responsive">
