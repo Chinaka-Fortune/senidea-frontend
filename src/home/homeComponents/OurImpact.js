@@ -18,7 +18,7 @@ const OurImpact = () => {
         {/* <h3 className="fw-bolder">Our Impact</h3> */}
       </div>
 
-      <div className="container">
+      <div className="container mb-3">
         <h4 className="fw-bolder mb-4">Our Events</h4>
 
         <div className="w-50 mt-1 mb-4">

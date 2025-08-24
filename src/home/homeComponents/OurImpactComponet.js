@@ -4,7 +4,7 @@ import "../Home.css";
 const OurImpactComponet = (props) => {
   return (
     <div>
-      <div className="OurImpactComponetDiv mx-auto">
+      <div className="OurImpactComponetDiv mx-auto mb-3">
         <img src={props.image} alt="impact displays" className="img-fluid" />
       </div>
       <div className="text-center OurImpactComponetDiv">
