@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 const HomeLandingPage = () => {
   return (
     <main>
-      <section id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active carouselDiv">
-      <img src={HappyChildren} class="d-block w-100" alt="..."/>
+      <section id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+  <div className="carousel-inner">
+    <div className="carousel-item active carouselDiv">
+      <img src={HappyChildren} className="d-block w-100" alt="..."/>
       <div className="carousel-caption dCaption">
         <h1>Every Child Deserve a Chance to Thrive</h1>
         <p>Empowering children with disabilities and the underprivileged through education, care, and community support.</p>
@@ -21,7 +21,7 @@ const HomeLandingPage = () => {
 
       </div>
     </div>
-    <div class="carousel-item carouselDiv">
+    <div className="carousel-item carouselDiv">
     <img src={HappyChildren} class="d-block w-100" alt="..."/>
       <div className="carousel-caption dCaption">
         <h1>Every Child Deserve a Chance to Thrive</h1>
@@ -50,12 +50,12 @@ const HomeLandingPage = () => {
 <div className="row mx-auto column-5 mt-4 SenideaEnableAllDiv">
   <div className="col-md-6 col-lg-4 mt-4 mb-md-0">
     <h5>
-      Senidea EnableAll Care Foundation is committed to uplifting
-              underserved individuals and communities by providing access to
-              essential care, support, and empowerment programs. Our goal is to
-              create inclusive opportunities that improve lives, promote
-              well-being, and inspire lasting change through compassion,
-              education, and active community engagement.
+        Senidea EnableAll Care Foundation is committed to uplifting
+        underserved individuals and communities by providing access to
+        essential care, support, and empowerment programs. Our goal is to
+        create inclusive opportunities that improve lives, promote
+        well-being, and inspire lasting change through compassion,
+        education, and active community engagement.
     </h5>
   </div>
   <div className="col-md-6 SenideaEnableAllDivImg">

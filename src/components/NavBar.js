@@ -78,6 +78,20 @@ const NavBar = () => {
                   Contact Us
                 </NavLink>
               </li>
+
+              <li className="nav-item me-3 list-style-none">
+                <NavLink
+                  className="text-decoration-none fs-5 nav-link"
+                  to="/ourimpact"
+                  style={({ isActive }) => ({
+                    color: isActive ? "#2A2E94" : "black",
+                    fontWeight: isActive ? "bolder" : "normal",
+                  })}
+                >
+                  Our Impact
+                </NavLink>
+              </li>
+
               {location.pathname === "/admin-dashboard" && (
                 <li className="nav-item me-3 list-style-none">
                   <NavLink

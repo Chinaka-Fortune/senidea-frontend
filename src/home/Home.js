@@ -1,7 +1,7 @@
 import React from 'react'
 
 import HomeLandingPage from './homeComponents/HomeLandingPage';
-import OurImpact from './homeComponents/OurImpact';
+// import OurImpact from './homeComponents/OurImpact';
 import CoreValue from './homeComponents/CoreValue';
 import VisionMisiion from './homeComponents/VisionMisiion';
 import PartOfChange from './homeComponents/PartOfChange';
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
      <HomeLandingPage />
-      <OurImpact />
+      {/* <OurImpact /> */}
      <CoreValue />
      <VisionMisiion />
      <PartOfChange />

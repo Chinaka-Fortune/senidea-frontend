@@ -6,12 +6,12 @@ import "../../index.css";
 
 const CoreValue = () => {
   return (
-    <div className=" mt-3 container-fluid ourCoreValueAnimate">
+    <div className=" mt-4 container-fluid ourCoreValueAnimate mb-2">
       <div className="row d-flex column-gap-lg-5 px-2  px-lg-5">
         <div className=" col-lg-6 px-2 px-lg-0">
-            <ul className="">
-          <p className="text-primary fw-bold ">ABOUT SENIDEA</p>
-          <h4 className="fw-bolder mb-5">Our Core Values</h4>
+          <ul className="mt-2">
+          {/* <p className="text-primary fw-bold ">ABOUT SENIDEA</p> */}
+          <h4 className="fw-bolder mb-4">Our Core Values</h4>
           <li>
             <span className="fw-bolder text-dark">Compassion -</span> We
             lead with empathy and kindness, placing human dignity at the center
@@ -47,7 +47,7 @@ const CoreValue = () => {
         </ul>
 
         </div>
-        <div className="col-md-5 coreValueLadyImg mt-5 d-none d-lg-block">
+        <div className="col-md-5 coreValueLadyImg mt-3 d-none d-lg-block">
           <img src={Lady} alt="A dark skin lady in a black top" />
         </div>
       </div>

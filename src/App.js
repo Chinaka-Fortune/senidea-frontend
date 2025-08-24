@@ -14,6 +14,7 @@ import SignUp from './dashBoard/dashComponent/SignUp';
 import EditBlog from './dashBoard/dashComponent/EditBlog';
 import PartnershipForm from './home/homeComponents/PartnershipForm';
 import VolunteerForm from './home/homeComponents/VolunteerForm';
+import OurImpact from './home/homeComponents/OurImpact';
 
 export const AuthContext = createContext();
 
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/ourimpact' element={<OurImpact />} />
           <Route path="/donation" element={<Donation />} />
           <Route path="/partnership" element={<PartnershipForm />} />
           <Route path="/volunteer" element={<VolunteerForm />} />
