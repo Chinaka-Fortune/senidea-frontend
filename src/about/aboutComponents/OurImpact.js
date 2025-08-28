@@ -10,6 +10,7 @@ import ManInBlackImg from "../../home/homeImages/ManInBlackImg.jpg";
 import Eating from "../../home/homeImages/Eating.jpg";
 
 import "../../home/Home.css";
+import '../../index.css'
 
 const OurImpact = () => {
   return (

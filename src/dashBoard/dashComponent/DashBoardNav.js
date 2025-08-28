@@ -3,6 +3,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import smillingLady from "../../home/homeImages/Lady.jpg";
 import { AuthContext } from "../../App";
 import "../DashBoard.css";
+import '../../index.css';
 
 const DashBoardNav = () => {
   const navigate = useNavigate();

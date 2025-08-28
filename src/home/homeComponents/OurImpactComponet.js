@@ -1,5 +1,6 @@
 import React from "react";
 import "../Home.css";
+import '../../index.css';
 
 const OurImpactComponet = (props) => {
   return (

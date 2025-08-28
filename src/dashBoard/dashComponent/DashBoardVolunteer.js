@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getVolunteers, deleteVolunteer } from "../../utils/api";
 import "../DashBoard.css";
+import '../../index.css';
 
 const DashBoardVolunteer = () => {
   const [volunteers, setVolunteers] = useState([]);

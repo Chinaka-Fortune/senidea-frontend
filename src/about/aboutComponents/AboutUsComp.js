@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../index.css';
 import hoodieBoy from '../aboutImages/hoodieBoy.jpg'
 
 

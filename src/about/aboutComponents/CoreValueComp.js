@@ -1,4 +1,5 @@
 import React from "react";
+import '../../index.css'
 import theBoyWithBroom from '../aboutImages/theBoyWithBroom.jpg'
 
 function CoreValue() {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { postRequest } from "../../utils/api";
 import "../Home.css";
+import '../../index.css';
 
 const PartnershipForm = () => {
   const [formData, setFormData] = useState({

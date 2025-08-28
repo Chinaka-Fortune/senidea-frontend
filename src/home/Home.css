@@ -4,15 +4,24 @@
     box-sizing: border-box;
 }
 
+
 .carouselDiv{
 width: 100%;
 height: 95vh;
 position: relative;
+background-image: url('./homeImages/senidea-train-5.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-color: rgba(0, 0, 255,0.5);
+background-blend-mode: overlay;
 }
 
 .carouselDiv img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    
 }
 
 .carouselDiv .carousel-caption{
@@ -25,6 +34,12 @@ position: relative;
     left: 0;
 }
 
+.welcomeText{
+    font-family: cursive;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
 .dCaption h1{ 
 font-size: 2rem;
 }
@@ -35,6 +50,8 @@ font-size: 1rem;
 .SenideaEnableAllDiv {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: space-around;
+    width: 97%;
 }
 
 .commentDiv{
@@ -42,9 +59,16 @@ font-size: 1rem;
     border-bottom-left-radius: 3rem;
 }
 
+.SenideaEnableAllDivImg{
+    width: 80rem;
+}
+
 .SenideaEnableAllDivImg img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: center 23%; 
+    /* transform: scale(1); */
 }
 
 .impactComponentDiv {
@@ -73,13 +97,16 @@ font-size: 1rem;
     object-fit: cover;
 }
 
-/* WHERE I HAVE GOTTEN TO */
-
 .SenideaEnableAllText {
     width: 40%;
 }
 
-
+.dCaptionText{
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* CORE VALUE SECTION */
 
@@ -222,7 +249,6 @@ font-size: 1.4rem;
     .SenideaEnableAllDiv {
         display: flex;
         flex-direction: row;
-        justify-content: center;
     }
 
     .commentDiv{
@@ -230,9 +256,9 @@ font-size: 1.4rem;
     border-bottom-left-radius: 3rem;
 }
 
-    .SenideaEnableAllDivImg {
-        width: 18rem;
-    }
+    /* .SenideaEnableAllDivImg {
+        width: 40rem;
+    } */
 
     .OurImpactComponetDiv {
         width: 11rem;
@@ -308,13 +334,13 @@ font-size: 1.4rem;
     padding: 0 30% 0 3%;
 }
     .SenideaEnableAllDivImg {
-        width: 22rem;
-        height: 15rem;
+        width: 37vw;
+        height: 45vh;
     }
 
     .coreValueLadyImg {
         width: 40%;
-        height: 30rem;
+        height: 50vh;
     }
 
     .coreValueLadyImg img {

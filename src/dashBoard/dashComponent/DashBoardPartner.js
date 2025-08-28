@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { getPartners, deletePartner } from "../../utils/api";
 import "../DashBoard.css";
+import '../../index.css';
 
 const formatDate = (dateString) => {
   return new Date(dateString).toISOString().split("T")[0]; // Returns YYYY-MM-DD

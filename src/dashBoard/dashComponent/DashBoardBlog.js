@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getBlogPosts, deleteBlogPost, createBlogPost } from "../../utils/api";
 import "../DashBoard.css";
+import '../../index.css'
 
 const DashBoardBlog = () => {
   const [posts, setPosts] = useState([]);

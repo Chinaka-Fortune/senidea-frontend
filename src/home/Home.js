@@ -11,12 +11,13 @@ import MailingList from './homeComponents/MailingList';
 import HelpPeople from './homeComponents/HelpPeople';
 import CorporatePartners from './homeComponents/CorporatePartners';
 import Testimonies from './homeComponents/Testimonies';
+import FoundationSenidea from './homeComponents/FoundationSenidea';
 
 const Home = () => {
   return (
     <div>
      <HomeLandingPage />
-      {/* <OurImpact /> */}
+       <FoundationSenidea /> 
      <CoreValue />
      <VisionMisiion />
      <PartOfChange />

@@ -1,9 +1,6 @@
 .navbar{
     height:5.5rem;
     outline: 0.01rem solid rgba(128, 128, 128, 0.459);
-    /* margin-bottom: 10rem; */
-    /* z-index: 3; */
-    /* background-color: white; */
 }
 
 .navbar-brandDiv{
@@ -15,4 +12,17 @@ width: 5rem;
 }
 .btnDonation:hover{
     background-color: rgba(42, 46, 148, 0.8);
+}
+
+.phone-nav-color{
+    background-color: rgba(42,46,148,0.3);
+    backdrop-filter: blur(5px);
+}
+
+.phoneBorder{
+    border-bottom-right-radius: 0.3rem;
+}
+
+.hoverText{
+    background-color: rgba(179,174,174,0.2);
 }

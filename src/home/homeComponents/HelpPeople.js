@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import LadyBackingBaby from "../homeImages/ladyBackingBaby.jpg";
 import manSitting from "../homeImages/manSitting.jpg";
 import starringLady from "../homeImages/starringLady.jpg";
+import '../../index.css';
+import '../Home.css';
 
 const HelpPeople = () => {
   return (

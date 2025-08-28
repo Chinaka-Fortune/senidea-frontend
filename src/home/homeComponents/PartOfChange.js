@@ -5,6 +5,7 @@ import partnershipHandShake from "../homeImages/partnershipHandShake.jpg";
 import beneficiaryHands from "../homeImages/beneficiaryHands.jpg";
 import { Link } from "react-router-dom";
 import "../Home.css";
+import '../../index.css';
 
 const PartOfChange = () => {
   return (

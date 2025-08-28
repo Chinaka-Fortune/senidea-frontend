@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { postRequest, getUserProfile } from "../../utils/api";
 import { AuthContext } from "../../App";
 import "../Donation.css";
+import '../../index.css';
 import paymentCards from "../donationImage/paymentCards.png";
 
 const DonationMessage = () => {

@@ -5,6 +5,9 @@ import Eating from '../aboutImages/Eating.jpg'
 import ManInBlackImg from '../aboutImages/ManInBlackImg.jpg'
 import VolunteerImg from '../aboutImages/VolunteerImg.jpg'
 import OneHand from '../aboutImages/OneHand.jpg'
+
+import '../About.css';
+import '../../index.css';
 function LivesImpacted() {
     return (
         <div>

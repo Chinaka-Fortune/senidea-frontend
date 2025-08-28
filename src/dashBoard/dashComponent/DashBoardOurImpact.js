@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { createImpactPost, getImpactPosts } from "../../utils/api";
 import "../DashBoard.css";
+import '../../index.css';
 
 const DashBoardOurImpact = () => {
   const [title, setTitle] = useState("");

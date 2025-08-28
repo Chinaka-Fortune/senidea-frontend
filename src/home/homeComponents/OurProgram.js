@@ -8,6 +8,7 @@ import handsInAgreement from "../homeImages/handsInAgreement.jpg";
 import familyWithChild from "../homeImages/familyWithAChild.jpg";
 
 import "../Home.css";
+import '../../index.css';
 
 const OurProgram = () => {
   return (

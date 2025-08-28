@@ -1,6 +1,7 @@
 import React from "react";
 import volunteer from '../aboutImages/volunteer.jpg'
 import "../About.css"
+import '../../index.css';
 
 const OurMission = () => {
     return (
