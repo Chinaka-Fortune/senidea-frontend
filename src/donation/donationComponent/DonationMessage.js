@@ -109,13 +109,13 @@ const DonationMessage = () => {
   };
 
   return (
-    <div className="container my-5" style={{ maxWidth: "800px", padding: "20px" }}>
+    <div className="container" style={{ maxWidth: "800px", padding: "0 20px" }}>
       <div className="row justify-content-center">
         <div className="col-12 col-lg-8">
-          <h3 style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#ffffff", textAlign: "center", marginBottom: "20px" }}>
+          <h3 style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>
             Make a Donation
           </h3>
-          <p style={{ color: "#ffffff", textAlign: "center", marginBottom: "30px" }}>
+          <p style={{ color: "", textAlign: "center", marginBottom: "" }}>
             Your support helps us bring hope to those in need. Fill out the form below to contribute.
             {isLoggedIn ? " Your email is pre-filled but can be edited." : " Please enter your details."}
           </p>
@@ -260,7 +260,7 @@ const DonationMessage = () => {
               </form>
             </div>
           </div>
-          <p className="mt-3 text-center" style={{ color: "#ffffff" }}>
+          <p className="mt-3">
             <span className="text-danger">*</span> indicates required fields
           </p>
         </div>

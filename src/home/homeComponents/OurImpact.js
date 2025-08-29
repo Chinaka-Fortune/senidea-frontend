@@ -18,22 +18,22 @@ const OurImpact = () => {
         {/* <h3 className="fw-bolder">Our Impact</h3> */}
       </div>
 
-      <div className="container mb-3">
-        <h4 className="fw-bolder mb-4">Our Events</h4>
+      <div className="impactComponentDiv d-flex mx-auto justify-content-center flex-column">
+        <h4 className="fw-bolder mb-4 ps-lg-3">Our Events</h4>
 
-        <div className="w-50 mt-1 mb-4">
-          <h5 className="fw-bolder mt-2 mb-2">Equal Opportunities</h5>
-          <p>We promote equal opportunities, and foster a society where everyone can reach their full potential regardless of their physical and cognitive abilities.</p>
+        <div className=" mt-1 mb-4 impactComponentEventDiv">
+          <h5 className="fw-bolder mt-2 mb-2 ps-lg-3">Equal Opportunities</h5>
+          <p className="ps-lg-3">We promote equal opportunities, and foster a society where everyone can reach their full potential regardless of their physical and cognitive abilities.</p>
         </div>
 
-        <div className="w-50 mt-2">
-          <h5 className="fw-bolder mt-2">Provide Support</h5>
-          <p>We provide support for persons with dissabilities and the less privileged through partnership with relevant government agencies and donor agencies.</p>
+        <div className=" mt-2 impactComponentEventDiv">
+          <h5 className="fw-bolder mt-2 ps-lg-3">Provide Support</h5>
+          <p className="ps-lg-3">We provide support for persons with dissabilities and the less privileged through partnership with relevant government agencies and donor agencies.</p>
         </div>
 
       </div>
 
-      <div className="impactComponentDiv d-flex mx-auto justify-content-center">
+      <div className="impactComponentDiv d-flex mx-auto justify-content-center mt-4">
       <div className="d-flex column-gap-3  overflow-x-auto ">
         <OurImpactComponet
           image={LoveHands}

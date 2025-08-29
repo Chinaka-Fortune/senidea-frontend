@@ -31,8 +31,8 @@ const NavBar = () => {
 
         <div className="d-none d-md-block">
           <div>
-            <ul className="navbar-nav nav-underline">
-              <li className="nav-item me-3 list-style-none">
+            <ul className="navbar-nav nav-underline d-flex justify-content-between">
+              <li className="nav-item  list-style-none">
                 <NavLink
                   className="text-decoration-none fs-5 nav-link"
                   to="/"
@@ -44,9 +44,9 @@ const NavBar = () => {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item me-3 list-style-none">
+              <li className="nav-item  list-style-none">
                 <NavLink
-                  className="text-decoration-none fs-5 nav-link"
+                  className="text-decoration-none fs-5  nav-link"
                   to="/about"
                   style={({ isActive }) => ({
                     color: isActive ? "#2A2E94" : "black",
@@ -56,7 +56,7 @@ const NavBar = () => {
                   About Us
                 </NavLink>
               </li>
-              <li className="nav-item me-3 list-style-none">
+              <li className="nav-item  list-style-none">
                 <NavLink
                   className="text-decoration-none fs-5 nav-link"
                   to="/blog"
@@ -68,7 +68,7 @@ const NavBar = () => {
                   Blog
                 </NavLink>
               </li>
-              <li className="nav-item me-3 list-style-none">
+              <li className="nav-item  list-style-none">
                 <NavLink
                   className="text-decoration-none fs-5 nav-link"
                   to="/contact"
@@ -81,7 +81,7 @@ const NavBar = () => {
                 </NavLink>
               </li>
 
-              <li className="nav-item me-3 list-style-none">
+              <li className="nav-item  list-style-none">
                 <NavLink
                   className="text-decoration-none fs-5 nav-link"
                   to="/ourimpact"
@@ -117,7 +117,7 @@ const NavBar = () => {
       </div>
 
       <div className="w-50 d-md-none">
-        <div className="collapse nav-collapse pb-3 phone-nav-color phoneBorder" id="navbarNav">
+        <div className="collapse nav-collapse pb-3 phone-nav-color phoneBorder" id="navbarNav" nav-collapse-toggle='hide'>
           <ul className="navbar-nav nav-underline phone-transform">
             <li className="fs-5 py-2 ps-3 hoverText"> 
             <NavLink className='text-decoration-none '
@@ -149,13 +149,12 @@ const NavBar = () => {
             </NavLink>
               </li>
               <li className="fs-5 py-2 ps-3 hoverText"> 
-            {location.pathname === "/admin-dashboard" && (
                <NavLink className='text-decoration-none'
             to='/ourimpact'
             style={({isActive}) => ({color:isActive ? "#2a2e94" : "white", fontWeight: isActive ? "bolder" : "normal"})}>
               Our Impact
             </NavLink>
-              )}
+              
               </li>
               <li className="fs-5 py-2 ps-3 hoverText"> 
             {location.pathname === "/admin-dashboard" && (

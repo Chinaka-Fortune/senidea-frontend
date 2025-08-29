@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { postRequest } from '../../utils/api';
+import '../Contact.css';
+import '../../index.css'
 
 const ContactMessage = () => {
   const [contactUserName, setContactUserName] = useState('');
@@ -63,7 +65,7 @@ const ContactMessage = () => {
               {loading && <div className="alert alert-info">Sending...</div>}
               
                   
-                  <div className="d-lg-flex column-gap-lg-3">
+                  <div className="d-lg-flex column-gap-4">
                     <input
                       type="text"
                       value={contactUserName}
@@ -83,7 +85,7 @@ const ContactMessage = () => {
                     />
                   </div>
                   
-                  <div className="d-lg-flex column-gap-lg-3 mt-3">
+                  <div className="d-lg-flex column-gap-lg-4 mt-3">
                     <input
                       type="tel"
                       value={contactPhone}
@@ -117,7 +119,7 @@ const ContactMessage = () => {
               <input
                 type="submit"
                 value="Submit"
-                className="px-5 ms-5 py-1 rounded border-0 mt-3 fw-bold generalBtn text-white d-md-none d-lg-block"
+                className=" px-5 py-2 rounded border-0 mt-3 fw-bold generalBtn text-white d-md-none d-lg-block"
                 disabled={loading}
               />
             </form>
