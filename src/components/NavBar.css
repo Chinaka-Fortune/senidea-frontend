@@ -7,6 +7,10 @@
 width: 5rem;
 }
 
+.navOutLine{
+    border-bottom: 0.001rem solid rgba(0,0,0,0.5);
+}
+
 .btnDonation{
     background-color: #2A2E94;
 }

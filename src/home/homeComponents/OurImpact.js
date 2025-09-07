@@ -14,26 +14,26 @@ import "../../index.css"
 const OurImpact = () => {
   return (
     <div className="d-flex flex-column justify-content-center  ourImpactAnimate">
-      <div className="text-center my-5">
+      {/* <div className="text-center my-5"> */}
         {/* <h3 className="fw-bolder">Our Impact</h3> */}
-      </div>
+      {/* </div> */}
 
       <div className="impactComponentDiv d-flex mx-auto justify-content-center flex-column">
-        <h4 className="fw-bolder mb-4 ps-lg-3">Our Events</h4>
+        <h2 className="fw-bolder mb-1 ps-lg-3">Our Events</h2>
 
         <div className=" mt-1 mb-4 impactComponentEventDiv">
-          <h5 className="fw-bolder mt-2 mb-2 ps-lg-3">Equal Opportunities</h5>
-          <p className="ps-lg-3">We promote equal opportunities, and foster a society where everyone can reach their full potential regardless of their physical and cognitive abilities.</p>
+          <h5 className="fw-bolder mt-2 mb-2 ps-lg-3 bePartanimation">Equal Opportunities</h5>
+          <p className="ps-lg-3 bePartanimation">We promote equal opportunities, and foster a society where everyone can reach their full potential regardless of their physical and cognitive abilities.</p>
         </div>
 
         <div className=" mt-2 impactComponentEventDiv">
-          <h5 className="fw-bolder mt-2 ps-lg-3">Provide Support</h5>
-          <p className="ps-lg-3">We provide support for persons with dissabilities and the less privileged through partnership with relevant government agencies and donor agencies.</p>
+          <h5 className="fw-bolder mt-2 ps-lg-3 bePartanimation">Provide Support</h5>
+          <p className="ps-lg-3 bePartanimation">We provide support for persons with dissabilities and the less privileged through partnership with relevant government agencies and donor agencies.</p>
         </div>
 
       </div>
 
-      <div className="impactComponentDiv d-flex mx-auto justify-content-center mt-4">
+      <div className="impactComponentDiv d-flex mx-auto justify-content-center mt-4 bePartanimation">
       <div className="d-flex column-gap-3  overflow-x-auto ">
         <OurImpactComponet
           image={LoveHands}

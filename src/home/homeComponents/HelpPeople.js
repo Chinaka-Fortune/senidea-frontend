@@ -27,7 +27,7 @@ const HelpPeople = () => {
             </NavLink>
           </div>
         </div>
-        <div className="col-md-5 col-lg-7 ourImpactAnimate">
+        <div className="col-md-5 col-lg-7 dCaptionText">
           <div className="w-100 d-flex align-item-center justify-content-center position-relative mt-5 ps-5 mb-5 mb-md-0">
             <div className="helpPeopleImageDiv1">
               <img src={starringLady} alt="A lady starring" />

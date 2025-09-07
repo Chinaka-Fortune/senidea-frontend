@@ -7,7 +7,7 @@ const NavBar = () => {
   const location = useLocation();
 
   return (
-    <nav className="navbar navbar-expand-md bg-white sticky-top w-100">
+    <nav className="navbar navbar-expand-md bg-white sticky-top w-100 navOutLine">
       <div className="container-fluid d-flex align-item-center justify-content-between px-lg-5">
         <div className="navbar-brandDiv">
           <NavLink className="navbar-brand" to="/">
@@ -117,13 +117,14 @@ const NavBar = () => {
       </div>
 
       <div className="w-50 d-md-none">
-        <div className="collapse nav-collapse pb-3 phone-nav-color phoneBorder" id="navbarNav" nav-collapse-toggle='hide'>
+        <div className="collapse nav-collapse  phone-nav-color phoneBorder" id="navbarNav" nav-collapse-toggle='hide'>
           <ul className="navbar-nav nav-underline phone-transform">
             <li className="fs-5 py-2 ps-3 hoverText"> 
             <NavLink className='text-decoration-none '
             to='/'
+            
             style={({isActive}) => ({color:isActive ? "#2a2e94" : "white", fontWeight: isActive ? "bolder" : "normal"})}>
-              Home
+            <span data-bs-toggle='collapse' data-bs-target='#navbarNav'>Home</span>
             </NavLink>
             </li>
 
@@ -131,37 +132,47 @@ const NavBar = () => {
             <NavLink className='text-decoration-none'
             to='/about'
             style={({isActive}) => ({color:isActive ? "#2a2e94" : "white", fontWeight: isActive ? "bolder" : "normal"})}>
-              About Us
+              <span data-bs-toggle='collapse' data-bs-target='#navbarNav'>About Us</span>
             </NavLink>
               </li>
               <li className="fs-5 py-2 ps-3 hoverText"> 
             <NavLink className='text-decoration-none'
             to='/blog'
             style={({isActive}) => ({color:isActive ? "#2a2e94" : "white", fontWeight: isActive ? "bolder" : "normal"})}>
-              Blog
+              <span data-bs-toggle='collapse' data-bs-target='#navbarNav'>Blog</span>
             </NavLink>
               </li>
               <li className="fs-5 py-2 ps-3 hoverText"> 
             <NavLink className='text-decoration-none'
             to='/contact'
             style={({isActive}) => ({color:isActive ? "#2a2e94" : "white", fontWeight: isActive ? "bolder" : "normal"})}>
-              Contact Us
+              <span data-bs-toggle='collapse' data-bs-target='#navbarNav'>Contact Us</span>
             </NavLink>
               </li>
               <li className="fs-5 py-2 ps-3 hoverText"> 
                <NavLink className='text-decoration-none'
             to='/ourimpact'
             style={({isActive}) => ({color:isActive ? "#2a2e94" : "white", fontWeight: isActive ? "bolder" : "normal"})}>
-              Our Impact
+              <span data-bs-toggle='collapse' data-bs-target='#navbarNav'>Our Impact</span>
             </NavLink>
               
               </li>
+
+              <li className="ps-3">
+                
+                <NavLink to="/donation" className="py-2 px-4 text-white rounded text-decoration-none fw-bold generalBtn">
+                <span data-bs-toggle='collapse' data-bs-target='#navbarNav'>
+          Donation </span>
+        </NavLink>
+        
+              </li>
+
               <li className="fs-5 py-2 ps-3 hoverText"> 
             {location.pathname === "/admin-dashboard" && (
                <NavLink className='text-decoration-none'
             to='/admin-dashboard'
             style={({isActive}) => ({color:isActive ? "#2a2e94" : "white", fontWeight: isActive ? "bolder" : "normal"})}>
-              Admin
+              <span data-bs-toggle='collapse' data-bs-target='#navbarNav'>Admin</span>
             </NavLink>
               )}
               </li>

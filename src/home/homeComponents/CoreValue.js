@@ -10,9 +10,9 @@ const CoreValue = () => {
       <div className="row SenideaEnableAllDiv d-flex justify-content-between mx-auto">
         <div className=" col-lg-6">
           <ul className="mt-2">
-            {/* <p className="text-primary fw-bold ">ABOUT SENIDEA</p> */}
-            <h4 className="fw-bolder mb-4">Our Core Values</h4>
-            <li>
+            
+            <h4 className="fw-bolder mb-4 ourCoreValueAnimate">Our Core Values</h4>
+            <li className="ourCoreValueAnimate">
               <span className="fw-bolder text-dark">Compassion -</span> We lead
               with empathy and kindness, placing human dignity at the center of
               everything we do.
@@ -44,9 +44,7 @@ const CoreValue = () => {
             </li>
           </ul>
         </div>
-        {/* <div className="col-md-5 coreValueLadyImg mt-3 d-none d-lg-block">
-          <img src={Lady} alt="A dark skin lady in a black top" />
-        </div> */}
+
 
         <div className="col-md-6 d-flex justify-content-end mt-3 ">
           <div className="SenideaEnableAllDivImg d-none d-lg-block">

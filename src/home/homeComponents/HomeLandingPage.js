@@ -1,7 +1,6 @@
 import React from "react";
 import "../Home.css";
 import "../../index.css";
-import sinedeaWhite from "../homeImages/senideaWhite.jpg";
 import { NavLink } from "react-router-dom";
 const HomeLandingPage = () => {
   return (
@@ -85,19 +84,6 @@ const HomeLandingPage = () => {
           </div>
         </div>
       </section>
-
-      {/* <section className="container-fluid mt-5 dCaptionText bg-danger">
-        <div className="row mx-auto  mt-4 SenideaEnableAllDiv bg-primary ">
-          <div className="col-md-6 mt-4 mb-md-0 ">
-            <h5>
-              SENIDEA EnableAll Care Foundation Supporting and empowering disadvantaged children, young people with disabilities, and their families to live fulfilling lives.
-            </h5>
-          </div>
-          <div className="col-md-6 SenideaEnableAllDivImg">
-            <img src={sinedeaWhite} alt="Happy Children" />
-          </div>
-        </div>
-      </section> */}
     </main>
   );
 };

@@ -47,7 +47,7 @@ const MessageSection = () => {
 
   return (
     <div
-      className="bg container-fluid py-5"
+      className="bg container-fluid py-5 "
       style={{
         backgroundImage: `url(${neighbourhood})`,
         backgroundSize: "cover",
@@ -59,8 +59,8 @@ const MessageSection = () => {
         backgroundBlendMode: "overlay",
       }}
     >
-      <div className="row ourCoreValueAnimate">
-        <div className="col-lg-8 col-xl-6 col-md-10 mx-md-auto me-xl-0">
+      <div className="row ">
+        <div className="col-lg-8 col-xl-6 col-md-10 mx-md-auto me-xl-0 ">
           <form className="messageForm mx-md-auto mx-xl-0" onSubmit={handleSubmit}>
             <h6 className="text-white fw-bolder">CONTACT US</h6>
             <h3 className="text-white fw-bolder mb-5">Send Us a Message</h3>
@@ -69,7 +69,7 @@ const MessageSection = () => {
             {loading && <div className="alert alert-info">Sending...</div>}
 
             <div className="row">
-              <div className="messageInputDiv">
+              <div className="messageInputDiv ">
                 <input
                   type="text"
                   value={userName}

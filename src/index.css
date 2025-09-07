@@ -24,11 +24,11 @@
     animation-timeline: view();
     animation-range:entry 0% cover 40%;
 }
-.ourImpactAnimate2{
+/* .ourImpactAnimate2{
     animation: ourInpactANI 2s linear;
     animation-timeline: view();
     animation-range:entry 0% cover 40%;
-}
+} */
 
 @keyframes appear {
     from{
