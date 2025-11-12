@@ -41,11 +41,11 @@ const Footer = () => {
         <div className='col-lg-4'>
            <ul className='footerUl1'>
               <h5 className='mb-4 text-white fw-bold'>Contacts</h5>
-              <li className='mb-2 d-flex'><i className="bi bi-envelope me-2 text-white fw-bolder"></i><NavLink to='/info@senideaenableall.org' className="text-decoration-none text-white">info@senideaenableall.org</NavLink></li>
+              <li className='mb-2 d-flex'><i className="bi bi-envelope me-2 text-white fw-bolder"></i><NavLink to='/senideaenableallfoundation@mail.com' className="text-decoration-none text-white">senideaenableallfoundation@mail.com</NavLink></li>
 
-              <li className='mb-2'><i className="bi bi-telephone-fill text-white me-2"></i><NavLink to='/tel:+234 801 234 5678' className="text-decoration-none text-white">+234 801 234 5678</NavLink ></li>
+              <li className='mb-2'><i className="bi bi-telephone-fill text-white me-2"></i><NavLink to='/tel:+234 913 145 0872' className="text-decoration-none text-white">+234 913 145 0872</NavLink ></li>
 
-              <li className='mb-2 d-flex'><i className="bi bi-geo-alt-fill me-2 text-white"></i><NavLink to='/Plot 12, Unity Close, Off Adewale Street, Ikeja, Lagos, Nigeria' className="text-decoration-none text-white">Plot 12, Unity Close, Off Adewale Street, Ikeja, Lagos, Nigeria</NavLink></li>
+              <li className='mb-2 d-flex'><i className="bi bi-geo-alt-fill me-2 text-white"></i><NavLink to='/Plot 12, Unity Close, Off Adewale Street, Ikeja, Lagos, Nigeria' className="text-decoration-none text-white">No 39 Orlu road Amakohia, Opposite Imo Senior Citizen Center, Owerri, Imo State, Nigeria</NavLink></li>
 
               <li className='mb-2 d-flex'><i className="bi bi-facebook text-white me-2"></i><NavLink to='/SenideaEnableAll' className="text-decoration-none text-white">SenideaEnableAll</NavLink ></li>
 
