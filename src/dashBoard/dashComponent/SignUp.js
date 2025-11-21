@@ -54,66 +54,71 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container my-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6 col-lg-4">
-          <div className="card shadow-sm p-4">
-            <h3 className="text-center mb-4">Sign Up</h3>
-            {error && <div className="alert alert-danger">{error}</div>}
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3 position-relative">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="form-control"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <i className="bi bi-envelope-at-fill position-absolute end-0 top-50 translate-middle-y pe-3"></i>
-              </div>
-              <div className="mb-3 position-relative">
-                <input
-                  type={showPasswordType}
-                  placeholder="Password"
-                  className="form-control"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-                <i
-                  className={`position-absolute end-0 top-50 translate-middle-y pe-3 ${
-                    showPasswordType === "password" ? "bi bi-lock-fill" : "bi bi-unlock-fill"
-                  }`}
-                  onClick={handleShowTogglePasswordType}
-                  style={{ cursor: "pointer" }}
-                ></i>
-              </div>
-              <div className="mb-3 position-relative">
-                <input
-                  type={showPasswordType}
-                  placeholder="Confirm Password"
-                  className="form-control"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="d-flex justify-content-between">
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  disabled={loading}
-                >
-                  {loading ? "Signing Up..." : "Sign Up"}
-                </button>
-                <Link to="/login" className="btn btn-outline-primary">
-                  Log In
-                </Link>
-              </div>
-            </form>
+    <div className="dashBoardMain position-relative">
+      <div className="login-card mx-auto">
+        <h3 className="mt-3 text-center">Sign Up</h3>
+        {error && <div className="alert alert-danger">{error}</div>}
+
+        <form className="form" onSubmit={handleSubmit}>
+          
+          <div className="logInInputBox mb-2">
+            <input
+              type="email"
+              className="form-control bg-transparent text-white"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <i className="bi bi-envelope-at-fill"></i>
           </div>
-        </div>
+
+          <div className="logInInputBox mb-2">
+            <input
+              type={showPasswordType}
+              className="form-control bg-transparent text-white"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <i
+              className={showPasswordType === "password" ? "bi bi-lock-fill" : "bi bi-unlock-fill"}
+              onClick={handleShowTogglePasswordType}
+            ></i>
+          </div>
+
+         <div className="logInInputBox mb-4">
+            <input
+              type={showPasswordType}
+              className="form-control bg-transparent text-white"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+            <i
+              className={showPasswordType === "password" ? "bi bi-lock-fill" : "bi bi-unlock-fill"}
+              onClick={handleShowTogglePasswordType}
+            ></i>
+          </div>
+
+          <div className="mt-4 d-flex btn-group-mobile justify-content-center gap-3">
+            <button
+              type="submit"
+              className="px-4 py-2 rounded border-0 bg-primary text-white"
+              disabled={loading}
+            >
+              {loading ? "Signing Up..." : "Sign Up"}
+            </button>
+            <Link
+              to="/login"
+              className="px-4 py-2 rounded border-0 bg-primary text-white text-decoration-none"
+            >
+              Log In
+            </Link>
+          </div>
+        </form>
       </div>
     </div>
   );
