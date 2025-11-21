@@ -10,4 +10,4 @@ const Donation = () => {
   )
 }
 
-export default Donation
+export default Donation;

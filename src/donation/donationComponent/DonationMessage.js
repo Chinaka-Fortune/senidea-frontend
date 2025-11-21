@@ -2,8 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { postRequest, getUserProfile } from "../../utils/api";
 import { AuthContext } from "../../App";
 import "../Donation.css";
-import '../../index.css';
+import "../../index.css";
 import paymentCards from "../donationImage/paymentCards.png";
+import gofundmeLogo from "../donationImage/gofundme-logo.png";
 
 const DonationMessage = () => {
   const { isLoggedIn } = useContext(AuthContext);
@@ -22,31 +23,16 @@ const DonationMessage = () => {
   useEffect(() => {
     if (isLoggedIn) {
       const fetchUserProfile = async () => {
-        const token = localStorage.getItem('access_token');
-        console.debug("Checking login state:", { isLoggedIn, token: token ? token.substring(0, 10) + '...' : 'No token' });
-        if (!token) {
-          console.debug("No token found, skipping profile fetch");
-          return;
-        }
+        const token = localStorage.getItem("access_token");
+        if (!token) return;
         try {
-          console.debug("Fetching user profile with token:", token.substring(0, 10) + '...');
           const user = await getUserProfile();
-          console.log("User profile:", user);
           setFormData((prev) => ({ ...prev, email: user.email || "" }));
         } catch (err) {
-          console.error("Failed to fetch user profile:", {
-            message: err.message,
-            stack: err.stack,
-            name: err.name,
-            status: err.status || "N/A",
-            token: token ? token.substring(0, 10) + '...' : 'No token',
-          });
-          
+          console.error("Failed to fetch user profile:", err);
         }
       };
       fetchUserProfile();
-    } else {
-      console.debug("Not logged in, skipping profile fetch");
     }
   }, [isLoggedIn]);
 
@@ -88,180 +74,143 @@ const DonationMessage = () => {
         frequency: formData.frequency,
         recognition: formData.recognition,
       };
-      console.log("Submitting donation:", dataToSend);
       const response = await postRequest("donation", dataToSend, false);
-      console.log("Donation response:", response);
       setSuccess("Donation initialized! Redirecting to payment...");
       setTimeout(() => {
         window.location.href = response.authorization_url;
       }, 1000);
     } catch (err) {
-      console.error("Donation submission error:", {
-        message: err.message,
-        stack: err.stack,
-        name: err.name,
-        status: err.status || "N/A",
-      });
-      setError(`Failed to initialize donation: ${err.message}${err.status ? ` (Status: ${err.status})` : ""}`);
+      setError(`Failed to initialize donation: ${err.message}`);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="container" style={{ maxWidth: "800px", padding: "0 20px" }}>
+    <div className="container" style={{ maxWidth: "900px", padding: "0 20px" }}>
       <div className="row justify-content-center">
-        <div className="col-12 col-lg-8">
-          <h3 style={{ fontSize: "1.8rem", fontWeight: "bold", color: "#ffffff", textAlign: "center"}}>
-            Make a Donation
-          </h3>
-          <p style={{ color: "", textAlign: "center", marginBottom: "" }}>
-            Your support helps us bring hope to those in need. Fill out the form below to contribute.
-            {isLoggedIn ? " Your email is pre-filled but can be edited." : " Please enter your details."}
-          </p>
-          {error && (
-            <div
-              className="alert alert-danger"
-              style={{ backgroundColor: "#f8d7da", color: "#721c24", borderColor: "#f5c6cb", padding: "15px", marginBottom: "20px" }}
-            >
-              {error}
+        <div className="col-12 col-lg-10">
+
+          <div className="text-center mb-5 mt-4">
+            <h3 className="text-white fw-bold mb-4" style={{ fontSize: "2.1rem" }}>
+              Choose How You’d Like to Support Us
+            </h3>
+            <p className="text-primary-50 mb-5 lead">
+              Every donation counts — thank you for making a difference! ❤️
+            </p>
+
+            <div className="row g-4 justify-content-center">
+
+              <div className="col-12 col-md-6">
+                <div className="card h-100 bg-primary text-white border-0 shadow-lg hover-lift">
+                  <div className="card-body text-center p-4">
+                    <img src={paymentCards} alt="Payment cards" height="50" className="mb-3" />
+                    <h5 className="fw-bold">Donate with Card / Bank</h5>
+                    <p className="small opacity-90">
+                      Best for Nigeria & Africa<br />Instant • Secure • NGN
+                    </p>
+                    <button
+                      onClick={handleSubmit}
+                      disabled={loading}
+                      className="btn btn-light btn-lg w-100 mt-3 fw-bold"
+                    >
+                      {loading ? "Processing..." : "Donate via Paystack"}
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-12 col-md-6">
+                <a
+                  href="https://gofund.me/f1fd3837e"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none"
+                >
+                  <div className="card h-100 bg-success text-white border-0 shadow-lg hover-lift">
+                    <div className="card-body text-center p-4">
+                      <img
+                        src={gofundmeLogo}
+                        alt="GoFundMe"
+                        height="70"
+                        className="mb-3"
+                        style={{
+                          // filter: "brightness(0) invert(1)",
+                          objectFit: "contain"
+                        }}
+                      />
+                      <h5 className="fw-bold">Donate via GoFundMe</h5>
+                      <p className="small opacity-90">
+                        Best for International donors<br />USD • Trusted worldwide
+                      </p>
+                      <div className="btn btn-light btn-lg w-100 mt-3 fw-bold">
+                        Donate on GoFundMe →
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
             </div>
-          )}
-          {success && (
-            <div
-              className="alert alert-success"
-              style={{ backgroundColor: "#d4edda", color: "#155724", borderColor: "#c3e6cb", padding: "15px", marginBottom: "20px" }}
-            >
-              {success}
-            </div>
-          )}
-          <div className="card bg-dark text-white border-0 shadow-sm">
-            <div className="card-body" style={{ padding: "30px" }}>
+          </div>
+
+          <div className="card bg-dark text-white border-0 shadow-sm mt-5">
+            <div className="card-body" style={{ padding: "35px" }}>
+              <h5 className="text-center text-white-50 mb-4">
+                Prefer the full form? Complete your donation below
+              </h5>
+
+              {error && <div className="alert alert-danger mb-4">{error}</div>}
+              {success && <div className="alert alert-success mb-4">{success}</div>}
+
               <form onSubmit={handleSubmit}>
+               
                 <div className="mb-3">
-                  <label htmlFor="fullName" className="form-label" style={{ color: "#ffffff" }}>
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    placeholder="Enter your full name"
-                    style={{ backgroundColor: "#495057", color: "#ffffff", borderColor: "#6c757d" }}
-                  />
+                  <label htmlFor="fullName" className="form-label">Full Name</label>
+                  <input type="text" className="form-control" id="fullName" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="Enter your full name" style={{ backgroundColor: "#495057", color: "#fff" }} />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label" style={{ color: "#ffffff" }}>
-                    Email Address <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Enter your email"
-                    required
-                    style={{ backgroundColor: "#495057", color: "#ffffff", borderColor: "#6c757d" }}
-                  />
+                  <label htmlFor="email" className="form-label">Email Address <span className="text-danger">*</span></label>
+                  <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email" style={{ backgroundColor: "#495057", color: "#fff" }} />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="phoneNumber" className="form-label" style={{ color: "#ffffff" }}>
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="phoneNumber"
-                    name="phoneNumber"
-                    value={formData.phoneNumber}
-                    onChange={handleChange}
-                    placeholder="Enter your phone number"
-                    style={{ backgroundColor: "#495057", color: "#ffffff", borderColor: "#6c757d" }}
-                  />
+                  <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+                  <input type="tel" className="form-control" id="phoneNumber" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Enter your phone number" style={{ backgroundColor: "#495057", color: "#fff" }} />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="amount" className="form-label" style={{ color: "#ffffff" }}>
-                    Amount (NGN) <span className="text-danger">*</span>
-                  </label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="amount"
-                    name="amount"
-                    value={formData.amount}
-                    onChange={handleChange}
-                    placeholder="Enter amount in NGN"
-                    min="1"
-                    required
-                    style={{ backgroundColor: "#495057", color: "#ffffff", borderColor: "#6c757d" }}
-                  />
+                  <label htmlFor="amount" className="form-label">Amount (NGN) <span className="text-danger">*</span></label>
+                  <input type="number" className="form-control" id="amount" name="amount" value={formData.amount} onChange={handleChange} required min="1" placeholder="e.g. 5000" style={{ backgroundColor: "#495057", color: "#fff" }} />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="frequency" className="form-label" style={{ color: "#ffffff" }}>
-                    Donation Frequency
-                  </label>
-                  <select
-                    className="form-select"
-                    id="frequency"
-                    name="frequency"
-                    value={formData.frequency}
-                    onChange={handleChange}
-                    style={{ backgroundColor: "#495057", color: "#ffffff", borderColor: "#6c757d" }}
-                  >
+                  <label htmlFor="frequency" className="form-label">Donation Frequency</label>
+                  <select className="form-select" id="frequency" name="frequency" value={formData.frequency} onChange={handleChange} style={{ backgroundColor: "#495057", color: "#fff" }}>
                     <option value="One-time">One-time</option>
                     <option value="Monthly">Monthly</option>
                     <option value="Yearly">Yearly</option>
                   </select>
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="recognition" className="form-label" style={{ color: "#ffffff" }}>
-                    Recognition
-                  </label>
-                  <select
-                    className="form-select"
-                    id="recognition"
-                    name="recognition"
-                    value={formData.recognition}
-                    onChange={handleChange}
-                    style={{ backgroundColor: "#495057", color: "#ffffff", borderColor: "#6c757d" }}
-                  >
+                  <label htmlFor="recognition" className="form-label">Recognition</label>
+                  <select className="form-select" id="recognition" name="recognition" value={formData.recognition} onChange={handleChange} style={{ backgroundColor: "#495057", color: "#fff" }}>
                     <option value="Private">Private</option>
                     <option value="Public">Public</option>
                     <option value="Anonymous">Anonymous</option>
                   </select>
                 </div>
-                <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4">
-                  <img src={paymentCards} alt="Payment methods" className="img-fluid mb-3 mb-sm-0" style={{ maxWidth: "200px" }} />
-                  <div>
-                    <button
-                      type="submit"
-                      className="btn btn-primary me-2"
-                      style={{ backgroundColor: "#007bff", borderColor: "#007bff", color: "#ffffff", padding: "8px 16px" }}
-                      disabled={loading}
-                    >
-                      {loading ? "Processing..." : "Pay"}
-                    </button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      style={{ backgroundColor: "#6c757d", borderColor: "#6c757d", color: "#ffffff", padding: "8px 16px" }}
-                      onClick={handleReset}
-                      disabled={loading}
-                    >
-                      Reset
-                    </button>
-                  </div>
+
+                <div className="text-center mt-4">
+                  <button type="submit" className="btn btn-primary btn-lg px-5 me-3" disabled={loading}>
+                    {loading ? "Processing..." : "Continue to Paystack →"}
+                  </button>
+                  <button type="button" className="btn btn-outline-light btn-lg" onClick={handleReset} disabled={loading}>
+                    Reset
+                  </button>
                 </div>
               </form>
             </div>
           </div>
-          <p className="mt-3">
-            <span className="text-danger">*</span> indicates required fields
+
+          <p className="text-center text-white-50 mt-4 small">
+            <span className="text-danger">*</span> Required fields • All donations are secure and appreciated
           </p>
         </div>
       </div>
